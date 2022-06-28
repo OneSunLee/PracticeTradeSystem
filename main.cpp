@@ -364,15 +364,13 @@ void search_item(std::vector<glocery_item> &shop)
 	int choose;
 	do
 	{
-		std::cout << "请输入查询方式！" << std::endl;
-		std::cout << "★★★★★★★★★★★★★★★★★★★★★★★★★★★★" << std::endl;
+		std::cout << "★★★★★★★★★★★★★★★★★★★★★★★★★★★★" << std::endl;;
+		std::cout << "★请输入查询方式:★" << std::endl;
+		std::cout << "★☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆★" << std::endl;
 		std::cout << "★1.按商品编号查询商品信息！★" << std::endl;
-		std::cout << "★☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆★" << std::endl;
 		std::cout << "★2.按商品名称查询商品信息！★" << std::endl;
-		std::cout << "★☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆★" << std::endl;
 		std::cout << "★3.按商品产地查询商品信息！★" << std::endl;
-		std::cout << "★☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆★" << std::endl;
-		std::cout << "★0.按0退出查询系统！QAQ-QVQ★" << std::endl;
+		std::cout << "★0.按0退出查询系统！★" << std::endl;
 		std::cout << "★★★★★★★★★★★★★★★★★★★★★★★★★★★★" << std::endl;
 		std::cout << "请选择0~3" << std::endl;
 		scanf("%d", &choose);
@@ -382,6 +380,7 @@ void search_item(std::vector<glocery_item> &shop)
 			std::cin.get();
 			std::cout << "请输入商品编号：" << std::endl;
 			scanf("%s", a);
+			
 			for (i = 0; i < c; i++)
 			{
 				if (strcmp(a, shop[i].number) == 0)
@@ -480,9 +479,23 @@ void search_item(std::vector<glocery_item> &shop)
 		}
 	} while (choose != 0);
 }
+
+	bool compare_opreator(const glocery_item a, const glocery_item b, std::string c){
+		if(c=="")
+		{
+			;
+		}
+		else
+		{
+			;
+			;
+		}
+		return a.name<b.name;
+	};
 //--------------------------商品排序函数--------------------------
 void sort_items(std::vector<glocery_item> &shop)
 {
+
 	FILE *fp;
 	glocery_item t;
 	int c = 0, min = 0;
